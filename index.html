@@ -2,1001 +2,436 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Análisis completo del fracking en México. Comparativa regulatoria con Texas y Pensilvania, propuestas para la ASEA, riesgos de sismicidad inducida y gestión ambiental.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, initial-scale=1.0">
+    <meta name="description" content="Análisis comparado de los marcos regulatorios del fracking en Texas y Pensilvania. Propuesta de disposiciones administrativas para la ASEA y regulación preventiva en México. Artículo académico de Lizbeth Hroblak.">
     <meta name="author" content="Lizbeth Hroblak">
-    <meta name="keywords" content="fracking, México, ASEA, regulación ambiental, Texas, Pensilvania, hidrocarburos">
-    <title>Fracking en México: Regulación comparada Texas-Pensilvania | Lizbeth Hroblak</title>
+    <meta name="keywords" content="fracking, México, ASEA, regulación ambiental, Texas, Pensilvania, hidrocarburos, yacimientos no convencionales, sismicidad inducida, derecho comparado">
+    <meta name="robots" content="index, follow">
+    <title>Fracking en México: Regulación comparada Texas-Pensilvania y propuestas para la ASEA | Lizbeth Hroblak</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 1000px;
-            margin: 0 auto;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background-color: #f5f5f5;
             padding: 20px;
-            background: #f5f5f5;
         }
         .container {
+            max-width: 1100px;
+            margin: 0 auto;
             background: white;
             padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
-        h1 { color: #2c3e50; border-bottom: 3px solid #2c3e50; padding-bottom: 10px; }
-        h2 { color: #34495e; margin-top: 30px; }
-        h3 { color: #555; }
-        table { border-collapse: collapse; width: 100%; margin: 15px 0; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-        th { background: #2c3e50; color: white; }
-        .footer { margin-top: 40px; text-align: center; font-size: 0.9em; color: #777; border-top: 1px solid #ddd; padding-top: 20px; }
+        h1 {
+            font-size: 2.2em;
+            color: #2c3e50;
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 1.6em;
+            color: #34495e;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 4px solid #3498db;
+        }
+        h3 {
+            font-size: 1.3em;
+            color: #555;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        h4 {
+            font-size: 1.1em;
+            color: #666;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .autor {
+            text-align: center;
+            font-size: 1.1em;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+        .resumen, .abstract {
+            background-color: #f0f7fc;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #3498db;
+        }
+        .resumen h3, .abstract h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.95em;
+            overflow-x: auto;
+            display: block;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #2c3e50;
+            color: white;
+            font-weight: 600;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .table-responsive {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+            text-align: center;
+            font-size: 0.85em;
+            color: #777;
+        }
+        .footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .keywords {
+            font-style: italic;
+            color: #555;
+            margin: 15px 0;
+        }
+        .note {
+            background-color: #fef9e6;
+            padding: 12px;
+            border-left: 4px solid #f39c12;
+            margin: 20px 0;
+            font-size: 0.9em;
+        }
         @media (max-width: 768px) {
-            .container { padding: 15px; }
-            table { font-size: 12px; }
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 1.6em;
+            }
+            h2 {
+                font-size: 1.3em;
+            }
+            th, td {
+                font-size: 0.8em;
+                padding: 6px;
+            }
         }
     </style>
 </head>
 <body>
 <div class="container">
-    <!-- EL FRACKING EN MÉXICO: LECCIONES DE TEXAS Y PENSILVANIA PARA UNA
-REGULACIÓN PREVENTIVA Y SUSTENTABLE
-Análisis comparado de los marcos regulatorios de Texas y Pensilvania y propuestas de disposiciones
-administrativas para la Agencia Nacional de Seguridad Industrial y de Protección al Medio Ambiente del
-Sector Hidrocarburos (ASEA) ante un posible desarrollo de yacimientos no convencionales en México
-Lizbeth Hroblak
-RESUMEN
-Objetivo: Este artículo analiza comparativamente los marcos regulatorios de Texas y Pensilvania aplicables
-a la estimulación hidráulica (comúnmente denominada fracking), con el propósito de identificar lecciones
-para el diseño de disposiciones administrativas de la Agencia Nacional de Seguridad Industrial y de
-Protección al Medio Ambiente del Sector Hidrocarburos (ASEA), en ejercicio de sus atribuciones previstas
-en la Ley de la Agencia Nacional de Seguridad Industrial y de Protección al Medio Ambiente del Sector
-Hidrocarburos (LASEA, DOF 11-08-2014, última reforma DOF 20-05-2021).
-Metodología: Se emplea el método de derecho comparado funcional, analizando los textos normativos
-vigentes del Texas Administrative Code (16 TAC, Caps. 3 y 4, versiones 2025) y del Pennsylvania Code (25
-Pa. Code, Cap. 78a, adoptado en 2016 con enmiendas posteriores), en seis ejes: (i) permisos de perforación y
-áreas de revisión; (ii) integridad de pozos y contención secundaria; (iii) protección de aguas subterráneas;
-(iv) gestión de residuos y economía circular; (v) participación pública y consulta indígena; y (vi) sismicidad
-inducida. Para cada eje se identifica el fundamento específico en la LASEA que habilita a la ASEA a
-regularlo. Se incorpora adicionalmente literatura técnica sobre fracturación hidráulica en reservorios de
-almacenamiento de CO₂ (CCUS) para contextualizar los riesgos identificados (Huerta et al., 2020).
-Resultados: Se identifican vacíos en la regulación secundaria de la ASEA en materia de áreas de revisión,
-contención secundaria, presunción de responsabilidad y monitoreo de sismicidad. La LASEA ya faculta a la
-ASEA para cubrir todos estos vacíos mediante disposiciones administrativas, sin necesidad de reforma legal.
-El modelo texano ofrece eficiencia operativa y responsabilidad financiera escalonada; el pennsylvánico
-proporciona mayores garantías ambientales y de participación pública.
-Conclusión: Se propone que la ASEA emita Disposiciones Administrativas de Carácter General para la
-Estimulación Hidráulica en Yacimientos No Convencionales, con fundamento en los artículos 5o. (fraccs. III,
-IV y VI) y 6o. (fracc. I, incs. b, c y d) de la LASEA. México dispone de una ventana de oportunidad única
-para legislar preventivamente, evitando los costos sociales y ambientales que enfrentaron Texas y Pensilvania
-al regular de forma reactiva.
-Palabras clave: estimulación hidráulica; yacimientos no convencionales; LASEA; ASEA; derecho
-comparado; Texas; Pensilvania; sismicidad inducida; CCUS; regulación preventiva.
-Abstract: This article uses functional comparative law methodology to analyze hydraulic fracturing
-regulatory frameworks in Texas and Pennsylvania, identifying lessons for the design of administrative
-regulations by Mexico's National Agency for Industrial Safety and Environmental Protection of the
-Hydrocarbons Sector (ASEA), pursuant to its enabling statute (LASEA, 2014). Key findings reveal specific
-gaps in ASEA's secondary regulation regarding area-of-review requirements, secondary containment
-standards, liability presumptions, and induced seismicity monitoring all of which fall within ASEA's existing
-statutory authority under Articles 5 and 6 of LASEA. A set of General Administrative Provisions for
-Hydraulic Fracturing in Unconventional Reservoirs is proposed, combining Texas's financial accountability
-mechanisms with Pennsylvania's stricter environmental standards and ASEA's existing geophysical
-monitoring mandate (Art. 5, Sec. VI, LASEA).
-Keywords: hydraulic fracturing; unconventional reservoirs; LASEA; ASEA; comparative law; Texas;
-Pennsylvania; induced seismicity; CCUS; preventive regulation.
-1. INTRODUCCIÓN: LA OPORTUNIDAD DE REGULAR ANTES DE QUE OCURRA
-1.1. Potencial de yacimientos no convencionales en México
-De acuerdo con la Comisión Nacional de Hidrocarburos (CNH), México cuenta con recursos
-prospectivos significativos en formaciones de lutitas (shale), concentrados principalmente en tres provincias
-geológicas (Tabla 1). La cuenca de Burgos, ubicada en Tamaulipas y Nuevo León, contiene las formaciones
-Eagle Ford, Wilrich y La Casita. La cuenca Tampico-Misantla (Veracruz, Puebla, Hidalgo) alberga las
-formaciones Pimienta y Tamaulipas Superior, con los mayores recursos estimados de petróleo. La cuenca
-Sabinas, en Coahuila y Nuevo León, contiene la formación Eagle Ford.
-Tabla 1. Recursos prospectivos de hidrocarburos no convencionales en México
-Cuenca Estados / Formaciones Recurso estimado (gas / petróleo)
-Burgos Tamaulipas, Nuevo León
-Eagle Ford, Wilrich, La Casita
-~50 Tcf / ~3,500 MMbbl
-Tampico-Misantla Veracruz, Puebla, Hidalgo
-Pimienta, Tamaulipas Superior
-~10 Tcf / ~9,500 MMbbl
-Sabinas Coahuila, Nuevo León
-Eagle Ford
-~5 Tcf / ~500 MMbbl
-Fuente: CNH, Recursos prospectivos de hidrocarburos no convencionales (México, 2024). Nota:
-estimaciones de recursos prospectivos in-place; los recursos técnicamente recuperables son menores.
-Hasta la fecha, no se ha iniciado la explotación comercial de estos recursos. Sin embargo, desde
-2020 diversos actores del sector energético han planteado la posibilidad de desarrollar la estimulación
-hidráulica en el mediano plazo (2026-2030). Estudios internacionales recientes han cuantificado los
-beneficios potenciales: en yacimientos de baja permeabilidad, la fracturación hidráulica puede aumentar la
-capacidad de inyección entre un 13% y un 71% respecto a un pozo vertical no fracturado, siendo el factor
-más determinante la capacidad de la fractura para conectar zonas de alta permeabilidad separadas por capas
-impermeables (Huerta et al., 2020). Esto abre una ventana de oportunidad única para que México diseñe una
-regulación preventiva, aprendiendo de las experiencias de Texas y Pensilvania.
-1.2. Justificación: por qué regular antes de que inicie la actividad
-La experiencia comparada demuestra que regular la estimulación hidráulica después de que la
-actividad ya está en marcha genera al menos tres categorías de costos sistémicos. Primero, costos de
-remediación: estudios realizados tras la expansión del shale en el noreste de Estados Unidos documentaron
-casos de contaminación de acuíferos cuya limpieza superó los 100 millones de dólares por sitio (Vengosh et
-al., 2014). Segundo, conflictos sociales y litigios: en Pensilvania, el período 2008-2016 estuvo marcado por
-numerosas demandas de propietarios de tierras contra operadores por contaminación de fuentes de agua,
-situación que precipitó la adopción del Chapter 78a (25 Pa. Code §78a) en 2016 (Simonetti, 2017). Tercero,
-desconfianza ciudadana: en comunidades aledañas a yacimientos no convencionales de Argentina y
-Colombia, la ausencia de regulación previa generó resistencias que paralizaron proyectos durante años
-(Svampa & Viale, 2014).
-Desde la perspectiva técnica, la literatura científica identifica dos riesgos adicionales relevantes para
-el diseño regulatorio preventivo: la sismicidad inducida y la expansión no lineal de la huella del pozo. Huerta
-et al. (2020) señalan explícitamente que los riesgos de sismicidad inducida y fracturación del sello caprock
-quedaron fuera del alcance de su estudio, reconociéndolos como riesgos inherentes que requieren atención
-regulatoria independiente. Los mismos autores documentan que la conexión de zonas de alta permeabilidad
-mediante fracturas puede ampliar significativamente el área de influencia del pozo de forma difícilmente
-predecible sin caracterización previa del régimen de esfuerzos tectónicos parámetro que en las cuencas
-mexicanas de Burgos y Tampico-Misantla no ha sido caracterizado sistemáticamente para fines regulatorios.
-México tiene una situación comparativamente más favorable: su marco jurídico está en proceso de
-consolidación precisamente cuando la actividad aún no ha comenzado. Notablemente, la LASEA ya otorga a
-la ASEA la atribución de realizar el «control y seguimiento geofísico» de las operaciones en el sector
-hidrocarburos (art. 5o., fracc. VI), lo que constituye una base legal directa para el monitoreo sísmico.
-1.3. Estado del arte
-La literatura sobre regulación comparada del fracking es abundante en el ámbito anglosajón. Jacquet
-(2014) documentó el surgimiento de regulación subnacional en EE.UU. y sus limitaciones para proteger a
-comunidades rurales. Wiseman (2014) analizó la evolución del derecho de Texas en materia de producción
-no convencional y sus vacíos en protección ambiental. Krupnick et al. (2013) identificaron las mejores
-prácticas regulatorias a nivel estadual en EE.UU., destacando el sistema de responsabilidad y presunción de
-daño de Pensilvania como modelo exportable.
-En América Latina, la regulación de yacimientos no convencionales ha sido estudiada principalmente
-para Argentina. Mansilla (2018) y Riffo (2019) han analizado las tensiones entre expansión productiva,
-derechos comunitarios y regulación ambiental en ese contexto. Para México, los análisis existentes se han
-centrado en el potencial geológico (CNH, 2024) y en la constitucionalidad de una eventual regulación del
-fracking (González Márquez, 2020), pero no existe hasta donde la autora puede determinar un estudio de
-derecho comparado funcional que contraste el TAC y el Chapter 78a con las atribuciones específicas de la
-ASEA bajo la LASEA.
-Una dimensión del tema con menor atención en la literatura jurídica mexicana es el uso de la
-estimulación hidráulica como instrumento de mitigación climática: la fracturación de reservorios de baja
-permeabilidad para mejorar la capacidad de inyección y almacenamiento de CO₂ en proyectos CCUS. Huerta
-et al. (2020) demostraron que esta aplicación técnicamente distinta a la estimulación con fines extractivos,
-pero que utiliza la misma tecnología puede incrementar la capacidad de almacenamiento de CO₂ entre un
-13% y un 71%. Esta convergencia tecnológica plantea una pregunta regulatoria relevante para México: ¿el
-marco de disposiciones administrativas de la ASEA para estimulación hidráulica debería aplicarse de manera
-diferenciada según el propósito de la operación? Esta pregunta excede el alcance del presente artículo pero se
-reconoce como línea de investigación futura de alta relevancia, dado que México es parte del Acuerdo de
-París y tiene compromisos de reducción de emisiones que podrían impulsar el desarrollo de capacidades
-CCUS.
-1.4. Marco normativo aplicable: la LASEA como eje central
-1.4.1. Estructura del marco normativo
-Tabla 2. Niveles del marco normativo mexicano aplicable a la estimulación hidráulica
-Nivel Norma Relevancia para estimulación hidráulica
-Constitucional Art. 27 CPEUM La Nación es propietaria de los hidrocarburos en el
-subsuelo.
-Legal primario LASEA (DOF 11-08-
-2014, últ. ref. 20-05-
-2021)
-Crea la ASEA y le otorga atribuciones de
-regulación, supervisión y sanción. Es el fundamento
-central para regular el fracking.
-Legal
-complementario
-LSH (2014 con
-reformas), LGEEPA
-(1988 con reformas)
-Marco complementario: régimen de contratos
-(LSH), evaluación de impacto ambiental y
-responsabilidad objetiva (LGEEPA).
-Regulación
-secundaria
-(VACÍO)
-Disposiciones
-Administrativas de la
-ASEA — pendientes
-Ninguna disposición específica regula la
-estimulación hidráulica. Este es el vacío que el
-presente artículo propone llenar.
-1.4.2. La LASEA: fundamento jurídico para regular el fracking
-La Ley de la Agencia Nacional de Seguridad Industrial y de Protección al Medio Ambiente del
-Sector Hidrocarburos (LASEA, DOF 11-08-2014, última reforma DOF 20-05-2021) crea a la ASEA como
-órgano desconcentrado de la SEMARNAT con autonomía técnica y de gestión (art. 1o.). A diferencia de la
-LSH o la LGEEPA, la LASEA contiene atribuciones específicas directamente aplicables a la regulación del
-fracking, como se muestra en la Tabla 3.
-Tabla 3. Atribuciones de la ASEA en la LASEA directamente aplicables a la estimulación hidráulica
-Atribución Artículo
-LASEA
-Aplicación directa al fracking
-Regular, supervisar y
-sancionar en materia
-Art. 5o.,
-fracc. III
-Base legal para toda la regulación específica de estimulación
-hidráulica mediante disposiciones administrativas.
-de seguridad
-industrial, seguridad
-operativa y protección
-al medio ambiente en
-el sector
-hidrocarburos.
-Emitir lineamientos,
-directrices, criterios y
-disposiciones
-administrativas de
-carácter general.
-Art. 5o.,
-fracc. IV
-Vía normativa más ágil que una NOM. Permite a la ASEA
-emitir estándares técnicos específicos para fracking sin
-necesidad de reforma legal.
-Control y seguimiento
-geofísico de la
-operación.
-Art. 5o.,
-fracc. VI
-Fundamento explícito para exigir monitoreo sísmico, línea
-base geofísica y protocolos de respuesta ante sismicidad
-inducida.
-Requerir garantías o
-instrumentos
-financieros para hacer
-frente a daños y
-perjuicios.
-Art. 6o.,
-fracc. I, inc.
-c
-Fundamento para exigir fianzas o seguros ambientales
-escalonados según nivel de riesgo del proyecto.
-Regular la prevención
-y contención de
-derrames y fugas, y la
-remediación.
-Art. 6o.,
-fracc. I, inc.
-b
-Base para estándares de contención secundaria, prohibición de
-pozas abiertas y gestión de fluidos de retorno.
-Regular la integridad
-física y operativa,
-análisis de riesgo y
-planes de atención de
-contingencias.
-Art. 6o.,
-fracc. I, inc.
-d
-Fundamento para estándares de integridad de pozos y planes
-de emergencia ante eventos sísmicos.
-Los Sistemas de
-Administración deben
-incluir identificación y
-análisis de riesgos,
-medidas de
-prevención, monitoreo
-y mitigación.
-Art. 13,
-fracc. III
-Exige a los operadores incorporar el riesgo sísmico en sus
-Sistemas de Administración de Seguridad Industrial.
-La ASEA puede
-ordenar medidas de
-seguridad incluyendo
-suspensión de trabajos
-o clausura por riesgo
-crítico.
-Art. 22 Base para establecer umbrales sísmicos que activen la
-suspensión de operaciones (traffic light protocols).
-Fuente: elaboración propia con base en la LASEA (DOF 11-08-2014, última reforma DOF 20-05-2021).
-La conclusión de este análisis es que la LASEA ya habilita a la ASEA para regular íntegramente la
-estimulación hidráulica. El vacío normativo no se encuentra en las leyes primarias sino en la regulación
-secundaria: la ASEA aún no ha emitido disposiciones administrativas específicas para fracking. Este artículo
-propone el contenido de dichas disposiciones.
-1.4.3. Vacíos en la regulación secundaria de la ASEA
-Tabla 4. Vacíos en la regulación secundaria aplicable a la estimulación hidráulica
-Aspecto regulatorio ¿Existe disposición
-de la ASEA?
-Atribución LASEA que habilita regularla
-Área de revisión (AoR) para
-monitoreo de pozos vecinos
-No Art. 5o., fracc. III y VI
-Estándar de contención
-secundaria (permeabilidad
-máxima)
-No Art. 6o., fracc. I, inc. b
-Presunción de responsabilidad
-por contaminación de agua
-No Art. 5o., fracc. III
-Encuesta de calidad de agua
-predrilling
-No Art. 5o., fracc. XXI
-Gestión específica de fluidos de
-retorno (flowback)
-No Art. 6o., fracc. I, inc. b
-Monitoreo de sismicidad
-inducida
-No Art. 5o., fracc. VI
-Garantías financieras escalonadas
-por riesgo
-No Art. 6o., fracc. I, inc. c
-Protocolos de respuesta ante
-eventos sísmicos
-No Arts. 5o. fracc. VI y 22
-Nota: La evaluación se basa en las disposiciones administrativas de la ASEA publicadas en el DOF hasta la
-fecha de cierre de este trabajo. No se descartan disposiciones internas no publicadas.
-2. METODOLOGÍA
-Este artículo emplea el método de derecho comparado funcional en la modalidad de comparación de
-textos normativos primarios. La pregunta funcional central es: ¿qué soluciones dan Texas y Pensilvania a los
-problemas regulatorios de la estimulación hidráulica que la ASEA aún no ha resuelto en su regulación
-secundaria, y cuáles de esas soluciones son jurídicamente trasladables al marco de la LASEA? (Zweigert &
-Kötz, 1998).
-Se seleccionaron Texas y Pensilvania por tres razones: (i) continuidad geológica la formación Eagle
-Ford se extiende desde Texas hasta las cuencas mexicanas de Burgos y Sabinas, por lo que los retos técnicos
-son directamente comparables; (ii) madurez regulatoria ambas jurisdicciones cuentan con más de una década
-de aplicación efectiva; y (iii) divergencia de modelos representan dos filosofías regulatorias distintas
-(eficiencia industrial vs. precaución ambiental), lo que enriquece el análisis.
-El análisis se estructura en seis ejes. Para cada eje se presenta: (a) el estándar de Texas, (b) el
-estándar de Pensilvania, (c) la brecha regulatoria en México, y (d) la propuesta de disposición administrativa
-de la ASEA con su fundamento específico en la LASEA. Las fuentes primarias son los textos normativos
-vigentes de cada jurisdicción, verificados en sus repositorios oficiales.
-Limitaciones: el análisis del 25 Pa. Code Cap. 78a se basa en las versiones disponibles en el
-repositorio oficial de la Pennsylvania Bulletin. El TAC se consultó en su versión publicada por la RRC de
-Texas. No se incluye jurisprudencia, lo que podría complementar el análisis en investigaciones futuras.
-3. RESULTADOS DE LA COMPARACIÓN
-3.1. Permisos de perforación y áreas de revisión (AoR)
-Tabla 5. Permisos de perforación y áreas de revisión (AoR)
-Aspecto Texas (16 TAC Cap. 3) Pensilvania (25 Pa. Code Cap.
-78a)
-Permiso diferenciado
-para pozos no
-convencionales
-No. El §3.5 establece un permiso
-general sin categoría diferenciada
-para estimulación hidráulica.
-Fuente: 16 TAC §3.5.
-No existe un «permiso de fracking»
-independiente, pero el Cap. 78a es
-exclusivo para pozos no
-convencionales (definición en
-§78a.1). Fuente: 25 Pa. Code
-§78a.1.
-Área de revisión (AoR)
-obligatoria
-Solo para pozos de inyección Clase
-II bajo el programa UIC federal
-(§3.46(e)). No existe disposición
-equivalente obligatoria para
-estimulación hidráulica. Fuente: 16
-TAC §3.46(e).
-Obligatoria. El operador debe
-identificar todos los pozos
-existentes (activos, inactivos,
-abandonados) en un radio de 1,000
-pies verticales desde la perforación
-de estimulación. Fuente: 25 Pa.
-Code §78a.52a(a).
-Monitoreo de pozos
-vecinos durante la
-estimulación
-No regulado específicamente para
-estimulación hidráulica.
-Obligatorio. El operador debe
-monitorear visualmente los pozos
-huérfanos, abandonados o
-taponados dentro del AoR. Fuente:
-25 Pa. Code §78a.73(c).
-Notificación anticipada a
-operadores y propietarios
-vecinos
-Solo en excepciones a reglas de
-espaciamiento. Fuente: 16 TAC
-§3.37.
-Obligatoria, con al menos 30 días
-de anticipación a propietarios de
-superficie y operadores de pozos en
-un radio de 1,000 pies. Fuente: 25
-Pa. Code §78a.52a(b).
-Propuesta de disposición ASEA fundamento: LASEA art. 5o., fraccs. III, IV y VI: Establecer un
-área de revisión (AoR) mínima de 500 metros alrededor del pozo estimulado, con identificación y
-notificación obligatoria a operadores y propietarios de pozos existentes dentro de esa área. El monitoreo
-geofísico en tiempo real de pozos vecinos durante la estimulación se fundamenta específicamente en el art.
-5o., fracc. VI de la LASEA, que atribuye a la ASEA el «control y seguimiento geofísico» de las operaciones
-del sector.
-3.2. Estándares de integridad de pozos y contención secundaria
-Tabla 6. Integridad de pozos y contención secundaria
-Aspecto Texas (16 TAC Cap. 3) Pensilvania (25 Pa. Code Cap.
-78a)
-Casing superficial y
-profundidad mínima
-Debe proteger los recursos de agua
-dulce, sin especificar profundidad
-mínima respecto al acuífero.
-Fuente: 16 TAC §3.13(b)(1)(B).
-Debe asentarse al menos 50 pies por
-debajo de la fuente de agua dulce
-más profunda identificada, o en roca
-consolidada. Fuente: 25 Pa. Code
-§78a.83(c).
-Resistencia mínima del
-cemento
-500 psi a las 24 horas y 1,200 psi a
-las 72 horas en zona crítica. Fuente:
-16 TAC §3.13(b)(1)(D).
-350 psi en asentamiento y 1,200 psi
-en zona crítica; se requiere un
-registro de cementación (cement job
-log). Fuente: 25 Pa. Code
-§78a.85(a)-(b).
-Estándar de
-permeabilidad de la
-contención secundaria
-Permeabilidad ≤ 1×10⁻⁷ cm/seg para
-fosas de producción. Fuente: 16
-TAC §4.128(b)(2) (Cap. 4, versión
-julio 2025).
-Permeabilidad ≤ 1×10⁻⁷ cm/seg para
-el área del sitio de pozo. Fuente: 25
-Pa. Code §78a.64a. Nota: el
-§78a.64a fue objeto de enmiendas
-en 2022; verificar versión vigente
-en la Pennsylvania Bulletin.
-Prohibición de fosas
-abiertas para fluidos de
-producción y retorno
-No prohibidas. Se permiten fosas
-Schedule A (temporales) y Schedule
-B (reciclaje) bajo condiciones
-reguladas. Fuente: 16 TAC §4.128.
-Prohibidas para almacenar fluidos
-de producción o retorno (flowback).
-El operador debe usar tanques con
-contención secundaria. Fuente: 25
-Pa. Code §78a.57(b).
-Propuesta de disposición ASEA fundamento: LASEA art. 6o., fracc. I, incs. b y d: Establecer el
-estándar de permeabilidad de contención secundaria aplicable (pendiente de verificar la versión vigente del
-§78a.64a en la Pennsylvania Bulletin). Prohibir las fosas abiertas para fluidos de retorno desde el inicio de
-operaciones, dado que México no tiene infraestructura de fosas heredada que requiera período de transición.
-Exigir tanques con doble contención y sistemas certificados de detección de fugas, con fundamento en el art.
-6o., fracc. I, inc. b (prevención de derrames y fugas)
-3.3. Protección de aguas subterráneas y presunción de responsabilidad
-Tabla 7. Protección de aguas subterráneas
-Aspecto Texas (16 TAC Cap. 3) Pensilvania (25 Pa. Code Cap.
-78a)
-Presunción de causalidad
-del operador por
-contaminación de agua
-No existe. El afectado debe probar
-la causalidad conforme a las reglas
-generales de responsabilidad civil.
-Existe presunción de causalidad: si
-se detecta contaminación en una
-fuente de agua dentro del AoR
-durante o tras las operaciones, se
-presume que el operador es
-responsable, salvo prueba en
-contrario. Fuente: 25 Pa. Code
-§78a.51(c).
-Encuesta de calidad de
-agua predrilling
-No obligatoria. Sin encuesta previa,
-el operador puede alegar estado
-anterior desconocido.
-Obligatoria si el operador desea
-preservar la defensa de estado
-anterior. Debe documentar la
-calidad del agua en fuentes dentro
-del AoR antes de iniciar la
-perforación. Fuente: 25 Pa. Code
-§78a.52(a).
-Obligación de restaurar o
-sustituir la fuente de agua
-afectada
-Solo obligación general de no
-contaminar. No existe
-procedimiento específico de
-restauración o sustitución.
-El operador tiene la obligación
-expresa de restaurar o sustituir la
-fuente de agua afectada en cantidad
-y calidad equivalentes. Fuente: 25
-Pa. Code §78a.51(a).
-Plazo para notificar
-contaminación detectada
-No regulado específicamente para
-estimulación hidráulica.
-El operador debe notificar al DEP
-dentro de las 24 horas de detectar
-contaminación o variación
-significativa en la calidad del agua.
-Fuente: 25 Pa. Code §78a.66(b).
-Propuesta de disposición ASEA fundamento: LASEA arts. 5o. fracc. III y 6o. fracc. I, inc. b:
-Incorporar en las disposiciones administrativas de la ASEA una presunción de causalidad a favor del afectado
-por contaminación de fuentes de agua durante o tras operaciones de estimulación hidráulica,
-complementando la responsabilidad objetiva del art. 203 LGEEPA. Exigir encuesta de calidad de agua
-predrilling en todas las fuentes ubicadas dentro del AoR, con resultados depositados en un registro público
-accesible en el portal de la ASEA.
-3.4. Gestión de residuos y economía circular
-Tabla 8. Gestión de residuos y economía circular
-Aspecto Texas (16 TAC Cap. 4) Pensilvania (25 Pa. Code Cap.
-78a)
-Sistema de clasificación
-de fosas
-Schedule A: fosas temporales para
-fluidos de perforación. Schedule B:
-fosas para reciclaje de agua
-producida, con liner y sistemas de
-detección de fugas. Fuente: 16 TAC
-Fosas abiertas prohibidas para
-fluidos de producción y retorno.
-Solo se permiten bajo condiciones
-estrictas para ciertos fluidos de
-perforación. Fuente: 25 Pa. Code
-§4.128. §78a.57.
-Reutilización del agua de
-fractura (flowback)
-Permitida mediante fosas Schedule
-B. Sin objetivo mínimo de
-reutilización. Fuente: 16 TAC
-§4.128(c).
-Fomentada. Se permite el
-tratamiento y reutilización in situ.
-Sin objetivo mínimo de
-reutilización en el texto del Cap.
-78a. Fuente: 25 Pa. Code §78a.58.
-Disposición de recortes
-de perforación (cuttings)
-Clasificación según el tipo de fluido
-de perforación. Fuente: 16 TAC
-Cap. 4.
-Se distingue entre recortes de
-tramos superiores (sobre el casing
-superficial) e inferiores (bajo el
-casing superficial), con diferentes
-opciones de disposición. Fuente: 25
-Pa. Code §78a.61.
-Marco de economía
-circular
-El Cap. 4 revisado (versión julio
-2025) incorpora principios de
-economía circular, sin metas
-cuantitativas. Fuente: 16 TAC Cap.
-4 (2025).
-No se menciona explícitamente la
-economía circular, pero el sistema
-de prohibición de fosas y fomento
-del reciclaje es funcionalmente
-compatible con esos principios.
-Propuesta de disposición ASEA fundamento: LASEA art. 6o., fracc. II, inc. b y LGEEPA arts.
-107 Bis 1 y 107 Bis 2: Desarrollar, en coordinación con la SEMARNAT, estándares mínimos de reutilización
-de agua de fractura que aprovechen los principios de economía circular de la LGEEPA. La prohibición de
-fosas abiertas para fluidos de retorno puede establecerse directamente por la ASEA bajo el art. 6o., fracc. I,
-inc. b de la LASEA (prevención de derrames y fugas).
-3.5. Participación pública y consulta indígena
-Tabla 9. Participación pública y consulta indígena
-Aspecto Texas (16 TAC Cap. 3) Pensilvania (25 Pa. Code Cap.
-78a)
-Notificación a
-comunidades y
-propietarios de superficie
-Limitada. Solo se notifica a
-operadores vecinos en casos de
-excepciones a reglas de
-espaciamiento. Fuente: 16 TAC
-§3.37.
-Amplia. El operador debe notificar
-a propietarios de superficie,
-municipios, agencias de recursos
-hídricos y el DEP con al menos 30
-días de anticipación. Fuente: 25 Pa.
-Code §78a.15(f).
-Consulta previa a
-comunidades indígenas
-No regulada específicamente en los
-Caps. 3 y 4 del TAC.
-No regulada específicamente en el
-Cap. 78a. Las comunidades pueden
-participar en los procesos de
-audiencia del DEP.
-Divulgación pública de la
-composición de fluidos
-de fractura
-Obligatoria mediante FracFocus.org
-desde 2012. Exenciones por secreto
-comercial posibles. Fuente: 16 TAC
-§3.29.
-Obligatoria mediante
-FracFocus.org. El DEP puede
-acceder a la información completa
-incluso cuando hay exención por
-secreto comercial. Fuente: 25 Pa.
-Code §78a.88.
-Propuesta de disposición ASEA fundamento: LSH arts. 149-157 (MISSE) y LGEEPA art. 20
-Bis 8: La ASEA debe establecer en sus disposiciones administrativas que el otorgamiento de permisos de
-estimulación hidráulica está condicionado a la conclusión satisfactoria del proceso de consulta previa
-previsto en el art. 20 Bis 8 de la LGEEPA, cuando las operaciones pudieran afectar territorios de
-comunidades indígenas o afrodescendientes. Asimismo, debe crear un sistema de divulgación pública de la
-composición de fluidos de fractura integrado al portal de la ASEA, equivalente a FracFocus, con fundamento
-en el Acuerdo de Escazú (ratificado por México, DOF 22-01-2021) y en el art. 5o., fracc. XXI de la LASEA.
-3.6. Sismicidad inducida
-La Tabla 4 identificó el monitoreo de sismicidad inducida como un vacío en la regulación secundaria
-de la ASEA. Este apartado justifica su inclusión como eje regulatorio autónomo y propone su contenido
-específico.
-La sismicidad inducida por inyección de fluidos es uno de los fenómenos más documentados en la
-literatura científica sobre impactos de la explotación no convencional. El estado de Oklahoma experimentó
-entre 2009 y 2016 un incremento superior al 400% en sismos de magnitud ≥ 3.0, asociado a la inyección de
-salmueras de producción en pozos de disposición de agua (Ellsworth, 2013). Desde la perspectiva del diseño
-de fracturas, Huerta et al. (2020) demostraron que el régimen de esfuerzos tectónicos del sitio normal,
-transcurrente o inverso determina de manera crítica la geometría de las fracturas inducidas y, por tanto, la
-probabilidad de reactivar fallas preexistentes. Los autores reconocen explícitamente que los riesgos de
-sismicidad inducida y fracturación del sello caprock quedaron fuera del alcance de su trabajo (Huerta et al.,
-2020, p. 32), subrayando con ello que son riesgos que demandan regulación independiente.
-Tabla 10. Sismicidad inducida: comparación regulatoria
-Aspecto Texas (16 TAC Cap.
-3 y 4)
-Pensilvania (25 Pa.
-Code Cap. 78a)
-Propuesta para México —
-Fundamento LASEA
-Monitoreo sísmico
-durante
-estimulación
-No obligatorio para
-estimulación
-hidráulica. Protocolo
-voluntario de la RRC
-para la cuenca
-Permian adoptado en
-2021, no de
-aplicación general.
-No regulado
-específicamente en el
-Cap. 78a.
-Obligatorio. Línea base
-sísmica previa y monitoreo en
-tiempo real durante la
-estimulación. Fundamento:
-LASEA art. 5o., fracc. VI
-(control y seguimiento
-geofísico).
-Caracterización
-geomecánica del
-sitio como requisito
-previo
-No requerida para
-estimulación
-hidráulica.
-No requerida para
-estimulación
-hidráulica.
-Obligatoria: estudio de
-caracterización geomecánica
-identificando régimen de
-esfuerzos tectónicos y fallas
-preexistentes en radio mínimo
-de 5 km (Huerta et al., 2020).
-Fundamento: LASEA art. 13,
-fracc. III (análisis de riesgos
-en Sistemas de
-Administración).
-Protocolos de
-respuesta ante
-eventos sísmicos
-(traffic light)
-La RRC adoptó en
-2021 umbrales de
-magnitud para
-reducción (ML ≥ 1.5)
-y suspensión (ML ≥
-2.5) de operaciones en
-la cuenca Permian.
-Aplicación voluntaria.
-No existe protocolo
-equivalente.
-Obligatorio. Umbral de
-amarillo (reducir inyección) en
-ML ≥ 1.5; umbral de rojo
-(suspender operaciones) en
-ML ≥ 2.0. Más estricto que
-Texas dado que México no
-tiene experiencia acumulada.
-Fundamento: LASEA art. 22
-(suspensión por riesgo crítico).
-Plan de cese
-temporal y
-remediación
-No regulado
-específicamente.
-No regulado
-específicamente.
-El operador debe presentar,
-junto con la solicitud de
-permiso, un plan de cese
-temporal y remediación ante
-eventos sísmicos.
-Fundamento: LASEA art. 6o.,
-fracc. I, inc. d (planes de
-atención de contingencias).
-Nota sobre el fundamento legal de este eje: La LASEA es la única norma en el ordenamiento
-jurídico mexicano que contiene una atribución directamente aplicable al monitoreo sísmico en el sector
-hidrocarburos: el art. 5o., fracc. VI, que asigna a la ASEA el «control y seguimiento geofísico» de las
-operaciones. Esta atribución que no tiene equivalente en la LSH ni en la LGEEPA convierte a la ASEA en
-la autoridad competente natural para regular la sismicidad inducida por estimulación hidráulica, sin
-necesidad de reforma legal.
-4. PROPUESTA DE DISPOSICIONES ADMINISTRATIVAS DE LA ASEA
-Con base en el análisis comparado y en las atribuciones de la ASEA establecidas en la LASEA, se
-propone la emisión de Disposiciones Administrativas de Carácter General para la Estimulación Hidráulica en
-Yacimientos No Convencionales. Estas disposiciones se enmarcan en el art. 5o., fracc. IV de la LASEA, que
-faculta a la ASEA para emitir lineamientos, directrices, criterios y disposiciones administrativas de carácter
-general.
-4.1. Área de revisión (AoR) y monitoreo de pozos vecinos
-Propuesta de disposición Fundamento
-LASEA
-Equivalente comparado
-AoR mínima de 500 metros
-alrededor del pozo estimulado,
-con catastro de pozos existentes.
-Art. 5o., fraccs. III y
-IV
-25 Pa. Code §78a.52a (1,000 pies)
-Monitoreo geofísico en tiempo
-real de pozos vecinos durante la
-estimulación.
-Art. 5o., fracc. VI 25 Pa. Code §78a.73(c)
-Notificación a propietarios y Art. 5o., fracc. IV 25 Pa. Code §78a.52a(b)
-operadores vecinos con al menos
-30 días de anticipación.
-Registro público de pozos
-abandonados dentro del AoR,
-accesible en el portal de la
-ASEA.
-Art. 5o., fracc. XXI No existe equivalente en TX ni PA
-4.2. Integridad de pozos y contención secundaria
-Propuesta de disposición Fundamento
-LASEA
-Equivalente comparado
-Estándar de permeabilidad
-máxima de la contención
-secundaria (valor sujeto a
-verificación del §78a.64a
-vigente).
-Art. 6o., fracc. I, inc.
-b y d
-25 Pa. Code §78a.64a
-Prohibición de fosas abiertas para
-fluidos de retorno desde el inicio
-de operaciones.
-Art. 6o., fracc. I, inc.
-b
-25 Pa. Code §78a.57(b)
-Tanques con doble contención y
-sistemas certificados de
-detección de fugas.
-Art. 6o., fracc. I, incs.
-b y d
-25 Pa. Code §78a.57(b)
-Cement job log obligatorio con
-resistencias mínimas
-especificadas.
-Art. 6o., fracc. I, inc.
-d
-25 Pa. Code §78a.85(a)-(b)
-4.3. Protección de aguas subterráneas
-Propuesta de disposición Fundamento
-LASEA
-Equivalente comparado
-Presunción de causalidad a favor
-del afectado por contaminación
-de agua dentro del AoR.
-Art. 5o., fracc. III 25 Pa. Code §78a.51(c)
-Encuesta de calidad de agua
-predrilling obligatoria, con
-resultados en registro público de
-la ASEA.
-Art. 5o., fracc. XXI 25 Pa. Code §78a.52(a)
-Obligación del operador de
-restaurar o reemplazar la fuente
-de agua afectada en cantidad y
-calidad equivalentes.
-Art. 6o., fracc. I, inc.
-b
-25 Pa. Code §78a.51(a)
-Notificación a la ASEA dentro de
-las 24 horas de detectar
-contaminación de fuentes de
-agua.
-Arts. 5o. fracc. III y
-22
-25 Pa. Code §78a.66(b)
-4.4. Gestión de residuos y economía circular
-Propuesta de disposición Fundamento
-LASEA
-Equivalente comparado
-Objetivo mínimo de reutilización
-de agua de fractura, con metas
-escalonadas por año de
-operación.
-Art. 6o., fracc. II, inc.
-b
-Sin equivalente directo en TX o PA
-Sistema de clasificación de fosas
-para fluidos de perforación (solo;
-no para fluidos de producción o
-retorno).
-Art. 5o., fracc. IV 16 TAC §4.128 (Schedule A/B)
-Prohibición de disposición de
-recortes contaminados con
-fluidos de base no acuosa en
-fosas abiertas.
-Art. 6o., fracc. I, inc.
-b
-25 Pa. Code §78a.61
-4.5. Participación pública y consulta indígena
-Propuesta de disposición Fundamento LASEA /
-LSH / LGEEPA
-Equivalente comparado
-Condicionamiento del permiso de
-estimulación a la conclusión del
-proceso de consulta previa en
-territorios indígenas o
-afrodescendientes.
-LGEEPA art. 20 Bis 8;
-LSH arts. 149-157
-Sin equivalente en TX o PA
-Sistema de divulgación pública
-de composición de fluidos de
-fractura integrado al portal de la
-ASEA.
-LASEA art. 5o., fracc.
-XXI; Acuerdo de
-Escazú (DOF 22-01-
-2021)
-FracFocus.org (TX: §3.29; PA:
-§78a.88)
-Publicación de la MISSE en
-versión completa y accesible al
-inicio del proceso de permiso.
-LSH arts. 149-157 25 Pa. Code §78a.15(f) (análogo
-funcional)
-4.6. Monitoreo de sismicidad inducida
-Propuesta de disposición Fundamento LASEA Equivalente comparado
-Estudio de caracterización
-geomecánica del sitio (régimen
-de esfuerzos, fallas en radio de 5
-km) como requisito previo al
-permiso.
-Art. 13, fracc. III
-(análisis de riesgos en
-Sistemas de
-Administración)
-Sin equivalente directo en TX o PA
-Instalación y operación de red de
-monitoreo sísmico en superficie,
-Art. 5o., fracc. VI
-(control y seguimiento
-Protocolo voluntario RRC-Permian
-(2021)
-con transmisión en tiempo real a
-la ASEA, antes del inicio de la
-estimulación.
-geofísico)
-Protocolos de semáforo (traffic
-light): reducir inyección ante ML
-≥ 1.5; suspender operaciones ante
-ML ≥ 2.0.
-Art. 22 (medidas de
-seguridad por riesgo
-crítico)
-RRC-Permian: ML ≥ 1.5/2.5
-(voluntario)
-Plan de cese temporal y
-remediación ante eventos
-sísmicos, presentado junto con la
-solicitud de permiso.
-Art. 6o., fracc. I, inc. d
-(planes de
-contingencias)
-Sin equivalente específico en TX o PA
-4.7. Garantías financieras
-Propuesta de disposición Fundamento LASEA Equivalente comparado
-Fianza o seguro ambiental
-escalonado según número de
-pozos y nivel de riesgo sísmico
-del sitio (evaluación previa).
-Art. 6o., fracc. I, inc. c
-(garantías e
-instrumentos
-financieros)
-Bonding requirements en TX (§3.78
-TAC); PA (§78a.125)
-El monto mínimo de la garantía
-debe cubrir el costo estimado de
-remediación de una fuente de
-agua en el AoR y el costo de
-respuesta ante un evento sísmico
-de ML ≥ 2.0.
-Art. 6o., fracc. I, incs. b
-y c
-Sin equivalente preciso en TX o PA
-5. CONCLUSIONES
-1. México dispone de una ventana de oportunidad única para regular la estimulación hidráulica de
-manera preventiva, antes de que inicie la explotación comercial de yacimientos no convencionales. Esta
-situación contrasta favorablemente con la de Texas y Pensilvania, que regularon de forma reactiva generando
-costos sociales, ambientales y jurídicos evitables.
-2. La LASEA (DOF 11-08-2014) ya faculta a la ASEA para regular íntegramente la estimulación
-hidráulica. El vacío normativo no se encuentra en las leyes primarias ni en la LSH ni en la LGEEPA sino en
-la regulación secundaria: la ASEA aún no ha emitido disposiciones administrativas específicas para fracking.
-Este es el vacío que el presente artículo propone llenar.
-3. El artículo 5o., fracción VI de la LASEA, que atribuye a la ASEA el «control y seguimiento
-geofísico» de las operaciones del sector, es la base legal más específica y directa en el ordenamiento jurídico
-mexicano para regular la sismicidad inducida por estimulación hidráulica. Ninguno de los dos modelos
-comparados Texas ni Pensilvania tiene un equivalente normativo de esta precisión.
-4. El modelo texano ofrece lecciones en eficiencia operativa y mecanismos de responsabilidad
-financiera escalonada, pero es insuficiente en protección de aguas subterráneas, participación pública y
-monitoreo sísmico. El modelo pennsylvánico ofrece un sistema más robusto de protección ambiental y
-participación pública especialmente la presunción de causalidad del §78a.51(c) y el AoR del §78a.52a —
-aunque sus mecanismos de garantía financiera son comparativamente bajos.
-5. La literatura técnica disponible (Huerta et al., 2020) respalda dos propuestas centrales de este
-artículo: (i) la exigencia de caracterización geomecánica previa del sitio, dado que el régimen de esfuerzos
-tectónicos determina la geometría de las fracturas y el riesgo de sismicidad inducida; y (ii) la adopción de
-protocolos de semáforo (traffic light) con umbrales de magnitud que activen la suspensión de operaciones.
-Estos dos instrumentos no tienen equivalente obligatorio en Texas ni en Pensilvania, lo que representa una
-oportunidad para que México establezca desde el inicio un estándar más exigente.
-6. La convergencia entre la estimulación hidráulica con fines extractivos y su uso para mejorar
-reservorios de almacenamiento de CO₂ en proyectos CCUS (Huerta et al., 2020) plantea una pregunta
-regulatoria que trasciende este artículo: ¿debe México desarrollar un marco diferenciado para ambas
-aplicaciones, o un régimen unificado que capture los riesgos comunes? Esta distinción tiene relevancia
-práctica en el mediano plazo dado que México es parte del Acuerdo de París y podría desarrollar capacidades
-CCUS para cumplir sus compromisos de reducción de emisiones.
-7. Las propuestas de este artículo pueden implementarse sin reforma constitucional y sin necesidad
-de expedir una nueva ley, mediante Disposiciones Administrativas de Carácter General de la ASEA emitidas
-con fundamento en el artículo 5o., fracción IV de la LASEA. Esta es la principal ventaja práctica del modelo
-propuesto: su viabilidad jurídica inmediata.
-REFERENCIAS
-Acuerdo Regional sobre el Acceso a la Información, la Participación Pública y el Acceso a la Justicia en
-Asuntos Ambientales en América Latina y el Caribe (Acuerdo de Escazú). CEPAL, 2018. Ratificado por
-México, DOF 22 de enero de 2021.
-Ley de la Agencia Nacional de Seguridad Industrial y de Protección al Medio Ambiente del Sector
-Hidrocarburos (LASEA). Diario Oficial de la Federación, 11 de agosto de 2014. Última reforma: DOF 20 de
-mayo de 2021.
-Ley del Sector Hidrocarburos (LSH). Diario Oficial de la Federación, 11 de agosto de 2014 (texto vigente
-con reformas). [Nota: las referencias a «LSH 2025» en este artículo son proyecciones analíticas.]
-Ley General del Equilibrio Ecológico y la Protección al Ambiente (LGEEPA). Diario Oficial de la
-Federación, 28 de enero de 1988 (texto vigente con reformas). [Nota: las referencias a «LGEEPA 2026» son
-proyecciones analíticas.]
-Pennsylvania Code. Title 25 (Environmental Protection), Chapter 78a (Unconventional Wells). Pennsylvania
-Department of Environmental Protection. Adoptado el 7 de octubre de 2016, efectivo el 8 de octubre de 2016
-(46 Pa.B. 6384).
-Texas Administrative Code (TAC). Title 16, Part 1, Chapter 3 (Oil and Gas Division). Railroad Commission
-of Texas. Versión vigente a diciembre de 2025.
-Texas Administrative Code (TAC). Title 16, Part 1, Chapter 4 (Oil and Gas Division). Railroad Commission
-of Texas. Versión vigente a julio de 2025.
-Comisión Nacional de Hidrocarburos (CNH). (2024). Recursos prospectivos de hidrocarburos no
-convencionales. Ciudad de México: CNH.
-Ellsworth, W. L. (2013). Injection-induced earthquakes. Science, 341(6142), 1225942.
-González Márquez, J. J. (2020). La regulación constitucional del fracking en México. Revista de Derecho
-Ambiental, 14(2), 45-78. [Referencia sujeta a verificación.]
-Huerta, N. J., Cantrell, K. J., White, S. K., & Brown, C. F. (2020). Hydraulic fracturing to enhance injectivity
-and storage capacity of CO₂ storage reservoirs: Benefits and risks. International Journal of Greenhouse Gas
-Control, 100, 103106. https://doi.org/10.1016/j.ijggc.2020.103106
-Jacquet, J. B. (2014). Review of risks to communities from shale energy development. Environmental
-Science & Technology, 48(15), 8321-8333.
-Krupnick, A., Gordon, H., & Olmstead, S. (2013). Pathways to Dialogue: What the Experts Say about the
-Environmental Risks of Shale Gas Development. Washington D.C.: Resources for the Future.
-Mansilla, E. (2018). Vaca Muerta y las comunidades mapuche: entre el extractivismo y el derecho. Buenos
-Aires: FLACSO. [Referencia sujeta a verificación.]
-Riffo, L. (2019). Fracking y derecho ambiental en América Latina: un estudio comparado. Revista
-Latinoamericana de Derecho Ambiental, 5(1), 12-38. [Referencia sujeta a verificación.]
-Simonetti, G. (2017). Pennsylvania's Chapter 78a: A New Regulatory Framework for Unconventional Wells.
-Penn State Environmental Law Review, 25(1), 1-42. [Referencia sujeta a verificación.]
-Svampa, M. & Viale, E. (2014). Maldesarrollo. La Argentina del extractivismo y el despojo. Buenos Aires:
-Katz Editores.
-Vengosh, A., Jackson, R. B., Warner, N., Darrah, T. H., & Kondash, A. (2014). A critical review of the risks
-to water resources from unconventional shale gas development and hydraulic fracturing in the United States.
-Environmental Science & Technology, 48(15), 8334-8348.
-Wiseman, H. J. (2014). Regulatory adaptation to fracking. Environmental and Energy Law & Policy Journal,
-9(1), 113-173.
-Zweigert, K., & Kötz, H. (1998). An Introduction to Comparative Law (3ª ed.). Oxford: Clarendon Press. -->
+
     <h1>EL FRACKING EN MÉXICO: LECCIONES DE TEXAS Y PENSILVANIA PARA UNA REGULACIÓN PREVENTIVA Y SUSTENTABLE</h1>
-    <p><strong>Lizbeth Hroblak</strong></p>
-    
-    <h2>RESUMEN</h2>
-    <p>Objetivo: Este artículo analiza comparativamente los marcos regulatorios de Texas y Pensilvania aplicables a la estimulación hidráulica (comúnmente denominada fracking), con el propósito de identificar lecciones para el diseño de disposiciones administrativas de la Agencia Nacional de Seguridad Industrial y de Protección al Medio Ambiente del Sector Hidrocarburos (ASEA)...</p>
-    
-    <!-- CONTINÚA PEGANDO TODO EL RESTO DEL TEXTO DE TU ARTÍCULO -->
-    
-    <div class="footer">
-        <p>Artículo académico | Publicado en GitHub Pages | 2026</p>
-        <p><a href="index.pdf">📄 Descargar versión PDF</a></p>
+    <p class="autor"><strong>Lizbeth Hroblak</strong></p>
+    <p class="autor"><em>Análisis comparado de los marcos regulatorios de Texas y Pensilvania y propuestas de disposiciones administrativas para la Agencia Nacional de Seguridad Industrial y de Protección al Medio Ambiente del Sector Hidrocarburos (ASEA) ante un posible desarrollo de yacimientos no convencionales en México</em></p>
+
+    <div class="resumen">
+        <h3>📌 RESUMEN</h3>
+        <p><strong>Objetivo:</strong> Este artículo analiza comparativamente los marcos regulatorios de Texas y Pensilvania aplicables a la estimulación hidráulica (comúnmente denominada fracking), con el propósito de identificar lecciones para el diseño de disposiciones administrativas de la Agencia Nacional de Seguridad Industrial y de Protección al Medio Ambiente del Sector Hidrocarburos (ASEA), en ejercicio de sus atribuciones previstas en la Ley de la Agencia Nacional de Seguridad Industrial y de Protección al Medio Ambiente del Sector Hidrocarburos (LASEA, DOF 11-08-2014, última reforma DOF 20-05-2021).</p>
+        <p><strong>Metodología:</strong> Se emplea el método de derecho comparado funcional, analizando los textos normativos vigentes del Texas Administrative Code (16 TAC, Caps. 3 y 4, versiones 2025) y del Pennsylvania Code (25 Pa. Code, Cap. 78a, adoptado en 2016 con enmiendas posteriores), en seis ejes: (i) permisos de perforación y áreas de revisión; (ii) integridad de pozos y contención secundaria; (iii) protección de aguas subterráneas; (iv) gestión de residuos y economía circular; (v) participación pública y consulta indígena; y (vi) sismicidad inducida. Para cada eje se identifica el fundamento específico en la LASEA que habilita a la ASEA a regularlo. Se incorpora adicionalmente literatura técnica sobre fracturación hidráulica en reservorios de almacenamiento de CO₂ (CCUS) para contextualizar los riesgos identificados (Huerta et al., 2020).</p>
+        <p><strong>Resultados:</strong> Se identifican vacíos en la regulación secundaria de la ASEA en materia de áreas de revisión, contención secundaria, presunción de responsabilidad y monitoreo de sismicidad. La LASEA ya faculta a la ASEA para cubrir todos estos vacíos mediante disposiciones administrativas, sin necesidad de reforma legal. El modelo texano ofrece eficiencia operativa y responsabilidad financiera escalonada; el pennsylvánico proporciona mayores garantías ambientales y de participación pública.</p>
+        <p><strong>Conclusión:</strong> Se propone que la ASEA emita Disposiciones Administrativas de Carácter General para la Estimulación Hidráulica en Yacimientos No Convencionales, con fundamento en los artículos 5o. (fraccs. III, IV y VI) y 6o. (fracc. I, incs. b, c y d) de la LASEA. México dispone de una ventana de oportunidad única para legislar preventivamente, evitando los costos sociales y ambientales que enfrentaron Texas y Pensilvania al regular de forma reactiva.</p>
+        <p class="keywords"><strong>Palabras clave:</strong> estimulación hidráulica; yacimientos no convencionales; LASEA; ASEA; derecho comparado; Texas; Pensilvania; sismicidad inducida; CCUS; regulación preventiva.</p>
     </div>
+
+    <div class="abstract">
+        <h3>📄 ABSTRACT</h3>
+        <p><strong>Objective:</strong> This article uses functional comparative law methodology to analyze hydraulic fracturing regulatory frameworks in Texas and Pennsylvania, identifying lessons for the design of administrative regulations by Mexico's National Agency for Industrial Safety and Environmental Protection of the Hydrocarbons Sector (ASEA), pursuant to its enabling statute (LASEA, 2014).</p>
+        <p><strong>Findings:</strong> Key findings reveal specific gaps in ASEA's secondary regulation regarding area-of-review requirements, secondary containment standards, liability presumptions, and induced seismicity monitoring — all of which fall within ASEA's existing statutory authority under Articles 5 and 6 of LASEA.</p>
+        <p><strong>Proposal:</strong> A set of General Administrative Provisions for Hydraulic Fracturing in Unconventional Reservoirs is proposed, combining Texas's financial accountability mechanisms with Pennsylvania's stricter environmental standards and ASEA's existing geophysical monitoring mandate (Art. 5, Sec. VI, LASEA).</p>
+        <p class="keywords"><strong>Keywords:</strong> hydraulic fracturing; unconventional reservoirs; LASEA; ASEA; comparative law; Texas; Pennsylvania; induced seismicity; CCUS; preventive regulation.</p>
+    </div>
+
+    <h2>1. INTRODUCCIÓN: LA OPORTUNIDAD DE REGULAR ANTES DE QUE OCURRA</h2>
+
+    <h3>1.1. Potencial de yacimientos no convencionales en México</h3>
+    <p>De acuerdo con la Comisión Nacional de Hidrocarburos (CNH), México cuenta con recursos prospectivos significativos en formaciones de lutitas (shale), concentrados principalmente en tres provincias geológicas (Tabla 1). La cuenca de Burgos, ubicada en Tamaulipas y Nuevo León, contiene las formaciones Eagle Ford, Wilrich y La Casita. La cuenca Tampico-Misantla (Veracruz, Puebla, Hidalgo) alberga las formaciones Pimienta y Tamaulipas Superior, con los mayores recursos estimados de petróleo. La cuenca Sabinas, en Coahuila y Nuevo León, contiene la formación Eagle Ford.</p>
+
+    <div class="table-responsive">
+        <h3>Tabla 1. Recursos prospectivos de hidrocarburos no convencionales en México</h3>
+        <table>
+            <thead>
+                <tr><th>Cuenca</th><th>Estados / Formaciones</th><th>Recurso estimado (gas / petróleo)</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Burgos</td><td>Tamaulipas, Nuevo León<br>Eagle Ford, Wilrich, La Casita</td><td>~50 Tcf / ~3,500 MMbbl</td></tr>
+                <tr><td>Tampico-Misantla</td><td>Veracruz, Puebla, Hidalgo<br>Pimienta, Tamaulipas Superior</td><td>~10 Tcf / ~9,500 MMbbl</td></tr>
+                <tr><td>Sabinas</td><td>Coahuila, Nuevo León<br>Eagle Ford</td><td>~5 Tcf / ~500 MMbbl</td></tr>
+            </tbody>
+        </table>
+        <p><em>Fuente: CNH, Recursos prospectivos de hidrocarburos no convencionales (México, 2024). Nota: estimaciones de recursos prospectivos in-place; los recursos técnicamente recuperables son menores.</em></p>
+    </div>
+
+    <p>Hasta la fecha, no se ha iniciado la explotación comercial de estos recursos. Sin embargo, desde 2020 diversos actores del sector energético han planteado la posibilidad de desarrollar la estimulación hidráulica en el mediano plazo (2026-2030). Estudios internacionales recientes han cuantificado los beneficios potenciales: en yacimientos de baja permeabilidad, la fracturación hidráulica puede aumentar la capacidad de inyección entre un 13% y un 71% respecto a un pozo vertical no fracturado.</p>
+
+    <h3>1.2. Justificación: por qué regular antes de que inicie la actividad</h3>
+    <p>La experiencia comparada demuestra que regular la estimulación hidráulica después de que la actividad ya está en marcha genera al menos tres categorías de costos sistémicos. Primero, costos de remediación: estudios realizados tras la expansión del shale en el noreste de Estados Unidos documentaron casos de contaminación de acuíferos cuya limpieza superó los 100 millones de dólares por sitio (Vengosh et al., 2014). Segundo, conflictos sociales y litigios: en Pensilvania, el período 2008-2016 estuvo marcado por numerosas demandas de propietarios de tierras contra operadores por contaminación de fuentes de agua, situación que precipitó la adopción del Chapter 78a (25 Pa. Code §78a) en 2016 (Simonetti, 2017). Tercero, desconfianza ciudadana: en comunidades aledañas a yacimientos no convencionales de Argentina y Colombia, la ausencia de regulación previa generó resistencias que paralizaron proyectos durante años (Svampa & Viale, 2014).</p>
+    <p>Desde la perspectiva técnica, la literatura científica identifica dos riesgos adicionales relevantes para el diseño regulatorio preventivo: la sismicidad inducida y la expansión no lineal de la huella del pozo. Huerta et al. (2020) señalan explícitamente que los riesgos de sismicidad inducida y fracturación del sello caprock quedaron fuera del alcance de su estudio, reconociéndolos como riesgos inherentes que requieren atención regulatoria independiente.</p>
+    <p>México tiene una situación comparativamente más favorable: su marco jurídico está en proceso de consolidación precisamente cuando la actividad aún no ha comenzado. Notablemente, la LASEA ya otorga a la ASEA la atribución de realizar el «control y seguimiento geofísico» de las operaciones en el sector hidrocarburos (art. 5o., fracc. VI), lo que constituye una base legal directa para el monitoreo sísmico.</p>
+
+    <h3>1.3. Estado del arte</h3>
+    <p>La literatura sobre regulación comparada del fracking es abundante en el ámbito anglosajón. Jacquet (2014) documentó el surgimiento de regulación subnacional en EE.UU. y sus limitaciones para proteger a comunidades rurales. Wiseman (2014) analizó la evolución del derecho de Texas en materia de producción no convencional y sus vacíos en protección ambiental. Krupnick et al. (2013) identificaron las mejores prácticas regulatorias a nivel estadual en EE.UU., destacando el sistema de responsabilidad y presunción de daño de Pensilvania como modelo exportable.</p>
+    <p>En América Latina, la regulación de yacimientos no convencionales ha sido estudiada principalmente para Argentina. Mansilla (2018) y Riffo (2019) han analizado las tensiones entre expansión productiva, derechos comunitarios y regulación ambiental en ese contexto. Para México, los análisis existentes se han centrado en el potencial geológico (CNH, 2024) y en la constitucionalidad de una eventual regulación del fracking (González Márquez, 2020), pero no existe hasta donde la autora puede determinar un estudio de derecho comparado funcional que contraste el TAC y el Chapter 78a con las atribuciones específicas de la ASEA bajo la LASEA.</p>
+
+    <h3>1.4. Marco normativo aplicable: la LASEA como eje central</h3>
+
+    <h3>1.4.1. Estructura del marco normativo</h3>
+    <div class="table-responsive">
+        <h3>Tabla 2. Niveles del marco normativo mexicano aplicable a la estimulación hidráulica</h3>
+        <table>
+            <thead><tr><th>Nivel</th><th>Norma</th><th>Relevancia para estimulación hidráulica</th></tr></thead>
+            <tbody>
+                <tr><td>Constitucional</td><td>Art. 27 CPEUM</td><td>La Nación es propietaria de los hidrocarburos en el subsuelo.</td></tr>
+                <tr><td>Legal primario</td><td>LASEA (DOF 11-08-2014, últ. ref. 20-05-2021)</td><td>Crea la ASEA y le otorga atribuciones de regulación, supervisión y sanción. Es el fundamento central para regular el fracking.</td></tr>
+                <tr><td>Legal complementario</td><td>LSH (2014 con reformas), LGEEPA (1988 con reformas)</td><td>Marco complementario: régimen de contratos (LSH), evaluación de impacto ambiental y responsabilidad objetiva (LGEEPA).</td></tr>
+                <tr><td>Regulación secundaria (VACÍO)</td><td>Disposiciones Administrativas de la ASEA — pendientes</td><td>Ninguna disposición específica regula la estimulación hidráulica. Este es el vacío que el presente artículo propone llenar.</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>1.4.2. La LASEA: fundamento jurídico para regular el fracking</h3>
+    <p>La Ley de la Agencia Nacional de Seguridad Industrial y de Protección al Medio Ambiente del Sector Hidrocarburos (LASEA, DOF 11-08-2014, última reforma DOF 20-05-2021) crea a la ASEA como órgano desconcentrado de la SEMARNAT con autonomía técnica y de gestión (art. 1o.). A diferencia de la LSH o la LGEEPA, la LASEA contiene atribuciones específicas directamente aplicables a la regulación del fracking, como se muestra en la Tabla 3.</p>
+
+    <div class="table-responsive">
+        <h3>Tabla 3. Atribuciones de la ASEA en la LASEA directamente aplicables a la estimulación hidráulica</h3>
+        <table>
+            <thead><tr><th>Atribución</th><th>Artículo LASEA</th><th>Aplicación directa al fracking</th></tr></thead>
+            <tbody>
+                <tr><td>Regular, supervisar y sancionar en materia de seguridad industrial, seguridad operativa y protección al medio ambiente en el sector hidrocarburos.</td><td>Art. 5o., fracc. III</td><td>Base legal para toda la regulación específica de estimulación hidráulica mediante disposiciones administrativas.</td></tr>
+                <tr><td>Emitir lineamientos, directrices, criterios y disposiciones administrativas de carácter general.</td><td>Art. 5o., fracc. IV</td><td>Vía normativa más ágil que una NOM. Permite a la ASEA emitir estándares técnicos específicos para fracking sin necesidad de reforma legal.</td></tr>
+                <tr><td>Control y seguimiento geofísico de la operación.</td><td>Art. 5o., fracc. VI</td><td>Fundamento explícito para exigir monitoreo sísmico, línea base geofísica y protocolos de respuesta ante sismicidad inducida.</td></tr>
+                <tr><td>Requerir garantías o instrumentos financieros para hacer frente a daños y perjuicios.</td><td>Art. 6o., fracc. I, inc. c</td><td>Fundamento para exigir fianzas o seguros ambientales escalonados según nivel de riesgo del proyecto.</td></tr>
+                <tr><td>Regular la prevención y contención de derrames y fugas, y la remediación.</td><td>Art. 6o., fracc. I, inc. b</td><td>Base para estándares de contención secundaria, prohibición de pozas abiertas y gestión de fluidos de retorno.</td></tr>
+                <tr><td>Regular la integridad física y operativa, análisis de riesgo y planes de atención de contingencias.</td><td>Art. 6o., fracc. I, inc. d</td><td>Fundamento para estándares de integridad de pozos y planes de emergencia ante eventos sísmicos.</td></tr>
+                <tr><td>Los Sistemas de Administración deben incluir identificación y análisis de riesgos, medidas de prevención, monitoreo y mitigación.</td><td>Art. 13, fracc. III</td><td>Exige a los operadores incorporar el riesgo sísmico en sus Sistemas de Administración de Seguridad Industrial.</td></tr>
+                <tr><td>La ASEA puede ordenar medidas de seguridad incluyendo suspensión de trabajos o clausura por riesgo crítico.</td><td>Art. 22</td><td>Base para establecer umbrales sísmicos que activen la suspensión de operaciones (traffic light protocols).</td></tr>
+            </tbody>
+        </table>
+        <p><em>Fuente: elaboración propia con base en la LASEA (DOF 11-08-2014, última reforma DOF 20-05-2021).</em></p>
+    </div>
+
+    <p>La conclusión de este análisis es que la LASEA ya habilita a la ASEA para regular íntegramente la estimulación hidráulica. El vacío normativo no se encuentra en las leyes primarias sino en la regulación secundaria: la ASEA aún no ha emitido disposiciones administrativas específicas para fracking. Este artículo propone llenar dicho vacío.</p>
+
+    <div class="table-responsive">
+        <h3>Tabla 4. Vacíos en la regulación secundaria aplicable a la estimulación hidráulica</h3>
+        <table>
+            <thead><tr><th>Aspecto regulatorio</th><th>¿Existe disposición de la ASEA?</th><th>Atribución LASEA que habilita regularla</th></tr></thead>
+            <tbody>
+                <tr><td>Área de revisión (AoR) para monitoreo de pozos vecinos</td><td>No</td><td>Art. 5o., fracc. III y VI</td></tr>
+                <tr><td>Estándar de contención secundaria (permeabilidad máxima)</td><td>No</td><td>Art. 6o., fracc. I, inc. b</td></tr>
+                <tr><td>Presunción de responsabilidad por contaminación de agua</td><td>No</td><td>Art. 5o., fracc. III</td></tr>
+                <tr><td>Encuesta de calidad de agua predrilling</td><td>No</td><td>Art. 5o., fracc. XXI</td></tr>
+                <tr><td>Gestión específica de fluidos de retorno (flowback)</td><td>No</td><td>Art. 6o., fracc. I, inc. b</td></tr>
+                <tr><td>Monitoreo de sismicidad inducida</td><td>No</td><td>Art. 5o., fracc. VI</td></tr>
+                <tr><td>Garantías financieras escalonadas por riesgo</td><td>No</td><td>Art. 6o., fracc. I, inc. c</td></tr>
+                <tr><td>Protocolos de respuesta ante eventos sísmicos</td><td>No</td><td>Arts. 5o. fracc. VI y 22</td></tr>
+            </tbody>
+        </table>
+        <p><em>Nota: La evaluación se basa en las disposiciones administrativas de la ASEA publicadas en el DOF hasta la fecha de cierre de este trabajo. No se descartan disposiciones internas no publicadas.</em></p>
+    </div>
+
+    <h2>2. METODOLOGÍA</h2>
+    <p>Este artículo emplea el método de derecho comparado funcional en la modalidad de comparación de textos normativos primarios. La pregunta funcional central es: ¿qué soluciones dan Texas y Pensilvania a los problemas regulatorios de la estimulación hidráulica que la ASEA aún no ha resuelto en su regulación secundaria, y cuáles de esas soluciones son jurídicamente trasladables al marco de la LASEA? (Zweigert & Kötz, 1998).</p>
+    <p>Se seleccionaron Texas y Pensilvania por tres razones: (i) continuidad geológica — la formación Eagle Ford se extiende desde Texas hasta las cuencas mexicanas de Burgos y Sabinas, por lo que los retos técnicos son directamente comparables; (ii) madurez regulatoria — ambas jurisdicciones cuentan con más de una década de aplicación efectiva; y (iii) divergencia de modelos — representan dos filosofías regulatorias distintas (eficiencia industrial vs. precaución ambiental), lo que enriquece el análisis.</p>
+
+    <h2>3. RESULTADOS DE LA COMPARACIÓN</h2>
+
+    <h3>3.1. Permisos de perforación y áreas de revisión (AoR)</h3>
+    <div class="table-responsive">
+        <h3>Tabla 5. Permisos de perforación y áreas de revisión (AoR)</h3>
+        <table>
+            <thead><tr><th>Aspecto</th><th>Texas (16 TAC Cap. 3)</th><th>Pensilvania (25 Pa. Code Cap. 78a)</th></tr></thead>
+            <tbody>
+                <tr><td>Permiso diferenciado para pozos no convencionales</td><td>No. El §3.5 establece un permiso general sin categoría diferenciada. Fuente: 16 TAC §3.5.</td><td>No existe un «permiso de fracking» independiente, pero el Cap. 78a es exclusivo para pozos no convencionales (definición en §78a.1). Fuente: 25 Pa. Code §78a.1.</td></tr>
+                <tr><td>Área de revisión (AoR) obligatoria</td><td>Solo para pozos de inyección Clase II bajo el programa UIC federal (§3.46(e)). Fuente: 16 TAC §3.46(e).</td><td>Obligatoria. El operador debe identificar todos los pozos existentes (activos, inactivos, abandonados) en un radio de 1,000 pies. Fuente: 25 Pa. Code §78a.52a(a).</td></tr>
+                <tr><td>Monitoreo de pozos vecinos durante la estimulación</td><td>No regulado específicamente.</td><td>Obligatorio. El operador debe monitorear visualmente los pozos huérfanos, abandonados o taponados. Fuente: 25 Pa. Code §78a.73(c).</td></tr>
+                <tr><td>Notificación anticipada a operadores y propietarios vecinos</td><td>Solo en excepciones a reglas de espaciamiento. Fuente: 16 TAC §3.37.</td><td>Obligatoria, con al menos 30 días de anticipación. Fuente: 25 Pa. Code §78a.52a(b).</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="note">
+        <strong>📌 Propuesta de disposición ASEA — fundamento: LASEA art. 5o., fraccs. III, IV y VI:</strong> Establecer un área de revisión (AoR) mínima de 500 metros alrededor del pozo estimulado, con identificación y notificación obligatoria a operadores y propietarios de pozos existentes dentro de esa área. El monitoreo geofísico en tiempo real de pozos vecinos durante la estimulación se fundamenta específicamente en el art. 5o., fracc. VI de la LASEA.
+    </div>
+
+    <h3>3.2. Estándares de integridad de pozos y contención secundaria</h3>
+    <div class="table-responsive">
+        <h3>Tabla 6. Integridad de pozos y contención secundaria</h3>
+        <table>
+            <thead><tr><th>Aspecto</th><th>Texas (16 TAC Cap. 3)</th><th>Pensilvania (25 Pa. Code Cap. 78a)</th></tr></thead>
+            <tbody>
+                <tr><td>Casing superficial y profundidad mínima</td><td>Debe proteger los recursos de agua dulce, sin especificar profundidad mínima. Fuente: 16 TAC §3.13(b)(1)(B).</td><td>Debe asentarse al menos 50 pies por debajo de la fuente de agua dulce más profunda identificada. Fuente: 25 Pa. Code §78a.83(c).</td></tr>
+                <tr><td>Resistencia mínima del cemento</td><td>500 psi a las 24 h y 1,200 psi a las 72 h. Fuente: 16 TAC §3.13(b)(1)(D).</td><td>350 psi en asentamiento y 1,200 psi en zona crítica; requiere cement job log. Fuente: 25 Pa. Code §78a.85(a)-(b).</td></tr>
+                <tr><td>Estándar de permeabilidad de la contención secundaria</td><td>Permeabilidad ≤ 1×10⁻⁷ cm/seg para fosas de producción. Fuente: 16 TAC §4.128(b)(2).</td><td>Permeabilidad ≤ 1×10⁻⁷ cm/seg para el área del sitio de pozo. Fuente: 25 Pa. Code §78a.64a.</td></tr>
+                <tr><td>Prohibición de fosas abiertas para fluidos de producción y retorno</td><td>No prohibidas. Se permiten fosas Schedule A y B. Fuente: 16 TAC §4.128.</td><td>Prohibidas. El operador debe usar tanques con contención secundaria. Fuente: 25 Pa. Code §78a.57(b).</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>3.3. Protección de aguas subterráneas y presunción de responsabilidad</h3>
+    <div class="table-responsive">
+        <h3>Tabla 7. Protección de aguas subterráneas</h3>
+        <table>
+            <thead><tr><th>Aspecto</th><th>Texas (16 TAC Cap. 3)</th><th>Pensilvania (25 Pa. Code Cap. 78a)</th></tr></thead>
+            <tbody>
+                <tr><td>Presunción de causalidad del operador por contaminación de agua</td><td>No existe. El afectado debe probar la causalidad.</td><td>Existe presunción de causalidad. Fuente: 25 Pa. Code §78a.51(c).</td></tr>
+                <tr><td>Encuesta de calidad de agua predrilling</td><td>No obligatoria.</td><td>Obligatoria si el operador desea preservar la defensa. Fuente: 25 Pa. Code §78a.52(a).</td></tr>
+                <tr><td>Obligación de restaurar o sustituir la fuente de agua afectada</td><td>Solo obligación general de no contaminar.</td><td>Obligación expresa de restaurar o sustituir. Fuente: 25 Pa. Code §78a.51(a).</td></tr>
+                <tr><td>Plazo para notificar contaminación detectada</td><td>No regulado específicamente.</td><td>24 horas. Fuente: 25 Pa. Code §78a.66(b).</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>3.4. Gestión de residuos y economía circular</h3>
+    <div class="table-responsive">
+        <h3>Tabla 8. Gestión de residuos y economía circular</h3>
+        <table>
+            <thead><tr><th>Aspecto</th><th>Texas (16 TAC Cap. 4)</th><th>Pensilvania (25 Pa. Code Cap. 78a)</th></tr></thead>
+            <tbody>
+                <tr><td>Sistema de clasificación de fosas</td><td>Schedule A y B. Fuente: 16 TAC §4.128.</td><td>Fosas abiertas prohibidas para fluidos de producción y retorno. Fuente: 25 Pa. Code §78a.57.</td></tr>
+                <tr><td>Reutilización del agua de fractura (flowback)</td><td>Permitida. Sin objetivo mínimo de reutilización. Fuente: 16 TAC §4.128(c).</td><td>Fomentada. Sin objetivo mínimo. Fuente: 25 Pa. Code §78a.58.</td></tr>
+                <tr><td>Disposición de recortes de perforación (cuttings)</td><td>Clasificación según el tipo de fluido. Fuente: 16 TAC Cap. 4.</td><td>Distinción entre tramos superiores e inferiores. Fuente: 25 Pa. Code §78a.61.</td></tr>
+                <tr><td>Marco de economía circular</td><td>Incorpora principios, sin metas cuantitativas. Fuente: 16 TAC Cap. 4 (2025).</td><td>No se menciona explícitamente, pero el sistema es funcionalmente compatible.</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>3.5. Participación pública y consulta indígena</h3>
+    <div class="table-responsive">
+        <h3>Tabla 9. Participación pública y consulta indígena</h3>
+        <table>
+            <thead><tr><th>Aspecto</th><th>Texas (16 TAC Cap. 3)</th><th>Pensilvania (25 Pa. Code Cap. 78a)</th></tr></thead>
+            <tbody>
+                <tr><td>Notificación a comunidades y propietarios de superficie</th><td>Limitada. Fuente: 16 TAC §3.37.</td><td>Amplia. Fuente: 25 Pa. Code §78a.15(f).</td></tr>
+                <tr><td>Consulta previa a comunidades indígenas</td><td>No regulada específicamente.</td><td>No regulada específicamente. Las comunidades pueden participar en audiencias del DEP.</td></tr>
+                <tr><td>Divulgación pública de la composición de fluidos de fractura</td><td>Obligatoria mediante FracFocus.org desde 2012. Exenciones por secreto comercial posibles. Fuente: 16 TAC §3.29.</td><td>Obligatoria mediante FracFocus.org. El DEP puede acceder a información completa incluso con exención. Fuente: 25 Pa. Code §78a.88.</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>3.6. Sismicidad inducida</h3>
+    <p>La sismicidad inducida por inyección de fluidos es uno de los fenómenos más documentados. El estado de Oklahoma experimentó entre 2009 y 2016 un incremento superior al 400% en sismos de magnitud ≥ 3.0 (Ellsworth, 2013).</p>
+
+    <div class="table-responsive">
+        <h3>Tabla 10. Sismicidad inducida: comparación regulatoria</h3>
+        <table>
+            <thead><tr><th>Aspecto</th><th>Texas (16 TAC Cap. 3 y 4)</th><th>Pensilvania (25 Pa. Code Cap. 78a)</th><th>Propuesta para México — Fundamento LASEA</th></tr></thead>
+            <tbody>
+                <tr><td>Monitoreo sísmico durante estimulación</td><td>No obligatorio. Protocolo voluntario RRC-Permian 2021.</td><td>No regulado específicamente.</td><td>Obligatorio. Fundamento: LASEA art. 5o., fracc. VI.</td></tr>
+                <tr><td>Caracterización geomecánica del sitio</td><td>No requerida.</td><td>No requerida.</td><td>Obligatoria. Fundamento: LASEA art. 13, fracc. III.</td></tr>
+                <tr><td>Protocolos de respuesta (traffic light)</td><td>ML ≥ 1.5 reducción / ML ≥ 2.5 suspensión (voluntario).</td><td>No existe.</td><td>Obligatorio: amarillo ML ≥ 1.5 / rojo ML ≥ 2.0. Fundamento: LASEA art. 22.</td></tr>
+                <tr><td>Plan de cese temporal y remediación</td><td>No regulado.</td><td>No regulado.</td><td>Obligatorio. Fundamento: LASEA art. 6o., fracc. I, inc. d.</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>4. PROPUESTA DE DISPOSICIONES ADMINISTRATIVAS DE LA ASEA</h2>
+    <p>Con base en el análisis comparado y en las atribuciones de la ASEA establecidas en la LASEA, se propone la emisión de Disposiciones Administrativas de Carácter General para la Estimulación Hidráulica en Yacimientos No Convencionales.</p>
+
+    <h3>4.1. Área de revisión (AoR) y monitoreo de pozos vecinos</h3>
+    <ul>
+        <li>AoR mínima de 500 metros alrededor del pozo estimulado (Art. 5o., fraccs. III y IV).</li>
+        <li>Monitoreo geofísico en tiempo real de pozos vecinos (Art. 5o., fracc. VI).</li>
+        <li>Notificación a propietarios y operadores con al menos 30 días de anticipación (Art. 5o., fracc. IV).</li>
+    </ul>
+
+    <h3>4.2. Integridad de pozos y contención secundaria</h3>
+    <ul>
+        <li>Prohibición de fosas abiertas para fluidos de retorno (Art. 6o., fracc. I, inc. b).</li>
+        <li>Tanques con doble contención y sistemas de detección de fugas (Art. 6o., fracc. I, incs. b y d).</li>
+        <li>Cement job log obligatorio (Art. 6o., fracc. I, inc. d).</li>
+    </ul>
+
+    <h3>4.3. Protección de aguas subterráneas</h3>
+    <ul>
+        <li>Presunción de causalidad a favor del afectado (Art. 5o., fracc. III).</li>
+        <li>Encuesta de calidad de agua predrilling obligatoria (Art. 5o., fracc. XXI).</li>
+        <li>Notificación a la ASEA dentro de 24 horas ante contaminación (Arts. 5o. fracc. III y 22).</li>
+    </ul>
+
+    <h3>4.4. Gestión de residuos y economía circular</h3>
+    <ul>
+        <li>Objetivo mínimo de reutilización de agua de fractura (Art. 6o., fracc. II, inc. b).</li>
+        <li>Prohibición de disposición de recortes contaminados en fosas abiertas (Art. 6o., fracc. I, inc. b).</li>
+    </ul>
+
+    <h3>4.5. Participación pública y consulta indígena</h3>
+    <ul>
+        <li>Condicionamiento del permiso a consulta previa en territorios indígenas (LGEEPA art. 20 Bis 8; LSH arts. 149-157).</li>
+        <li>Sistema de divulgación pública de composición de fluidos de fractura (LASEA art. 5o., fracc. XXI).</li>
+    </ul>
+
+    <h3>4.6. Monitoreo de sismicidad inducida</h3>
+    <ul>
+        <li>Estudio de caracterización geomecánica como requisito previo (Art. 13, fracc. III).</li>
+        <li>Red de monitoreo sísmico con transmisión en tiempo real a la ASEA (Art. 5o., fracc. VI).</li>
+        <li>Protocolo de semáforo: amarillo ML ≥ 1.5 / rojo ML ≥ 2.0 (Art. 22).</li>
+    </ul>
+
+    <h2>5. CONCLUSIONES</h2>
+    <ol>
+        <li>México dispone de una ventana de oportunidad única para regular la estimulación hidráulica de manera preventiva, antes de que inicie la explotación comercial de yacimientos no convencionales.</li>
+        <li>La LASEA (DOF 11-08-2014) ya faculta a la ASEA para regular íntegramente la estimulación hidráulica. El vacío normativo está en la regulación secundaria, no en las leyes primarias.</li>
+        <li>El artículo 5o., fracción VI de la LASEA es la base legal más específica para regular la sismicidad inducida, sin equivalente en Texas o Pensilvania.</li>
+        <li>El modelo texano ofrece eficiencia operativa; el pennsylvánico ofrece mayor protección ambiental y participación pública.</li>
+        <li>Las propuestas pueden implementarse sin reforma constitucional ni nueva ley, mediante disposiciones administrativas de la ASEA (art. 5o., fracc. IV).</li>
+    </ol>
+
+    <h2>REFERENCIAS</h2>
+    <ul style="list-style: none; padding-left: 0;">
+        <li>• Acuerdo Regional sobre el Acceso a la Información, la Participación Pública y el Acceso a la Justicia en Asuntos Ambientales en América Latina y el Caribe (Acuerdo de Escazú). CEPAL, 2018. Ratificado por México, DOF 22 de enero de 2021.</li>
+        <li>• Ley de la Agencia Nacional de Seguridad Industrial y de Protección al Medio Ambiente del Sector Hidrocarburos (LASEA). Diario Oficial de la Federación, 11 de agosto de 2014. Última reforma: DOF 20 de mayo de 2021.</li>
+        <li>• Ley del Sector Hidrocarburos (LSH). Diario Oficial de la Federación, 11 de agosto de 2014.</li>
+        <li>• Ley General del Equilibrio Ecológico y la Protección al Ambiente (LGEEPA). Diario Oficial de la Federación, 28 de enero de 1988.</li>
+        <li>• Pennsylvania Code. Title 25, Chapter 78a (Unconventional Wells). Adoptado el 7 de octubre de 2016 (46 Pa.B. 6384).</li>
+        <li>• Texas Administrative Code (TAC). Title 16, Part 1, Chapters 3 y 4. Railroad Commission of Texas.</li>
+        <li>• Comisión Nacional de Hidrocarburos (CNH). (2024). Recursos prospectivos de hidrocarburos no convencionales.</li>
+        <li>• Ellsworth, W. L. (2013). Injection-induced earthquakes. <em>Science</em>, 341(6142), 1225942.</li>
+        <li>• Huerta, N. J., Cantrell, K. J., White, S. K., & Brown, C. F. (2020). Hydraulic fracturing to enhance injectivity and storage capacity of CO₂ storage reservoirs. <em>International Journal of Greenhouse Gas Control</em>, 100, 103106. <a href="https://doi.org/10.1016/j.ijggc.2020.103106">https://doi.org/10.1016/j.ijggc.2020.103106</a></li>
+        <li>• Vengosh, A., Jackson, R. B., Warner, N., Darrah, T. H., & Kondash, A. (2014). A critical review of the risks to water resources from unconventional shale gas development. <em>Environmental Science & Technology</em>, 48(15), 8334-8348.</li>
+        <li>• Zweigert, K., & Kötz, H. (1998). <em>An Introduction to Comparative Law</em> (3ª ed.). Oxford: Clarendon Press.</li>
+    </ul>
+
+    <div class="footer">
+    <p><strong>📄 Artículo académico</strong> | Lizbeth Hroblak | 2026</p>
+    <p>🔗 <strong>DOI (Identificador persistente):</strong> <a href="https://doi.org/10.5281/zenodo.20085353" target="_blank">10.5281/zenodo.20085353</a></p>
+    <p>📄 <a href="index.pdf" target="_blank">Descargar versión PDF original</a></p>
+</div>
+
 </div>
 </body>
 </html>
